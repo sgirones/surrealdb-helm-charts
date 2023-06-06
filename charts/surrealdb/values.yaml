@@ -15,11 +15,13 @@ nameOverride: ""
 fullnameOverride: ""
 
 args: [start]
-env:
-  SURREAL_USER: root
-  SURREAL_PASS: surrealdb
-  SURREAL_PATH: memory
-  SURREAL_LOG: info
+
+surrealdb:
+  # Datastore path
+  # path: tikv://tikv-pd:2379
+  path: memory
+  # Log configuration
+  log: info
 
 serviceAccount:
   # Specifies whether a service account should be created
